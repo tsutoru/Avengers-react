@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import characters from '../Lespersonnage/characters.json'; // Assurez-vous que le chemin est correct pour accéder à votre fichier JSON
+import characters from '../Lespersonnage/characters.json'; 
 import React from 'react';
 
 function PersonnageLocal() {
   const { useState, useEffect } = React;
 
-  // Mock API service
+  
   const CharacterService = {
-    // In a real app, this would fetch from an actual API endpoint
+    
     getCharacters: async () => {
-      // Simulate API delay
+     
       await new Promise(resolve => setTimeout(resolve, 500));
 
-      // Try to get from localStorage, fallback to initial data
+
       const savedData = localStorage.getItem('charactersData');
       if (savedData) {
         return JSON.parse(savedData);
